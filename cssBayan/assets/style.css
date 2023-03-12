@@ -18,20 +18,12 @@ body {
     font-weight: 300;
     line-height: 1.2em;
     color: #1B1A1A;
-    background: linear-gradient(132.51deg, rgb(206 206 223 / 60%) 2.66%, rgb(233 210 236 / 60%) 74.47%, rgb(200 191 199 / 60%) 98.67%);
     margin: 0;
+    height: 100%;
 }
-
-a {
-    text-decoration: none;
-    color: #301C49;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+body {
+    background: rgb(206 206 223 / 60%);
 }
-
 ul,
 li {
     margin: 0;
@@ -40,10 +32,13 @@ li {
 }
 
 .container {
-    max-width: 70%;
+    width: 70%;
     margin: 0 auto;
     box-shadow: 0 0 0.7em 0.4em #2a2a2a94;
     background: #f6f6f6;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -91,8 +86,10 @@ h2.main-title {
     cursor: pointer;
 }
 
-.main-item-title-icon-close {
-    display: none;
+.main-item-title-icon-close img{
+    /* display: none; */
+    width: 0;
+    height: 0;
 }
 
 label.main-item-label {
@@ -138,12 +135,13 @@ input.main-item-radio {
     animation-duration: 3s;
 }
 
-.main-box .main-item-title-icon-open {
+.main-box .main-item-title-icon-open img {
     display: none;
 }
 
-.main-box:hover .main-item-title-icon-open {
+.main-box:hover .main-item-title-icon-open img {
     display: block;
+    margin-top: 1.8em;
 }
 
 .main-box:hover .main-item-title {
@@ -151,12 +149,16 @@ input.main-item-radio {
     transition: 1s linear;
 }
 
-.main-box .main-item:hover .main-item-title-icon-open {
+.main-box .main-item:hover .main-item-title-icon-open img {
     display: none;
 }
 
-.main-box .main-item:hover .main-item-title-icon-close {
-    display: block;
+.main-box .main-item:hover .main-item-title-icon-close img{
+    /* display: block; */
+ width: inherit;
+ height: inherit;
+ animation-name: slidein;
+ animation-duration: 1s;
 }
 
 input.main-item-radio:checked~.main-item-meme img {
@@ -180,8 +182,12 @@ input.main-item-radio:checked~.main-item-title .main-item-title-icon-open {
     display: none;
 }
 
-input.main-item-radio:checked~.main-item-title .main-item-title-icon-close {
-    display: block;
+input.main-item-radio:checked~.main-item-title .main-item-title-icon-close img{
+    /* display: block; */
+    width: inherit;
+    height: inherit;
+    animation-name: slidein;
+    animation-duration: 1s;
 }
 
 footer {
