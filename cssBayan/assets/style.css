@@ -21,15 +21,18 @@ body {
     margin: 0;
     height: 100%;
 }
+
 body {
     background: rgb(206 206 223 / 60%);
 }
+
 ul,
 li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 
 .container {
     width: 70%;
@@ -86,11 +89,6 @@ h2.main-title {
     cursor: pointer;
 }
 
-.main-item-title-icon-close img{
-    width: 0;
-    height: 0;
-}
-
 label.main-item-label {
     cursor: pointer;
 }
@@ -121,45 +119,8 @@ input.main-item-radio {
     height: 0;
 }
 
-.main-item:hover .main-item-meme img {
-    display: inline-block;
-    background: #301c4930;
-    padding: 3em;
-    border: 0.01em solid #9d9d9d3b;
-    border-radius: 2em;
-    box-shadow: 0.1em 0.1em 0.3em 0.2em #2a2a2a38;
-    width: inherit;
-    height: inherit;
-    animation-name: slidein;
-    animation-duration: 3s;
-    width: 25em;
-    height: 25em;
-    object-fit: contain;
-}
-
 .main-box .main-item-title-icon-open img {
     display: none;
-}
-
-.main-box:hover .main-item-title-icon-open img {
-    display: block;
-    margin-top: 1.8em;
-}
-
-.main-box:hover .main-item-title {
-    color: #1B1A1A;
-    transition: 1s linear;
-}
-
-.main-box .main-item:hover .main-item-title-icon-open img {
-    display: none;
-}
-
-.main-box .main-item:hover .main-item-title-icon-close img{
- width: inherit;
- height: inherit;
- animation-name: slidein;
- animation-duration: 1s;
 }
 
 input.main-item-radio:checked~.main-item-meme img {
@@ -173,22 +134,108 @@ input.main-item-radio:checked~.main-item-meme img {
     height: 25em;
     object-fit: contain;
 }
-.main-item:hover input.main-item-radio:checked~.main-item-meme img {
-    animation-name: inherit;
-    animation-duration: inherit;
-}
-input.main-item-radio:checked~.main-item-title{
-    color: #1B1A1A;
-}
-input.main-item-radio:checked~.main-item-title .main-item-title-icon-open {
-    display: none;
-}
 
-input.main-item-radio:checked~.main-item-title .main-item-title-icon-close img{
-    width: inherit;
-    height: inherit;
-    animation-name: slidein;
-    animation-duration: 1s;
+@media (hover: hover) {
+    .main-item-title-icon-close img {
+        width: 0;
+        height: 0;
+    }
+    .main-item:hover .main-item-meme img {
+        display: inline-block;
+        background: #301c4930;
+        padding: 3em;
+        border: 0.01em solid #9d9d9d3b;
+        border-radius: 2em;
+        box-shadow: 0.1em 0.1em 0.3em 0.2em #2a2a2a38;
+        animation-name: slidein;
+        animation-duration: 3s;
+        width: 25em;
+        height: 25em;
+        object-fit: contain;
+    }
+
+    .main-box:hover .main-item-title-icon-open img {
+        display: block;
+        margin-top: 1.8em;
+    }
+
+    .main-box:hover .main-item-title {
+        color: #1B1A1A;
+        transition: 1s linear;
+    }
+
+    .main-box .main-item:hover .main-item-title-icon-open img {
+        display: none;
+    }
+
+    .main-box .main-item:hover .main-item-title-icon-close img {
+        width: inherit;
+        height: inherit;
+        animation-name: slidein;
+        animation-duration: 1s;
+    }
+
+    .main-item:hover input.main-item-radio:checked~.main-item-meme img {
+        animation-name: inherit;
+        animation-duration: inherit;
+    }
+    input.main-item-radio:checked~.main-item-title {
+        color: #1B1A1A;
+    }
+    input.main-item-radio:checked~.main-item-title .main-item-title-icon-open {
+        display: none;
+    }
+    input.main-item-radio:checked~.main-item-title .main-item-title-icon-close img {
+        width: inherit;
+        height: inherit;
+        animation-name: slidein;
+        animation-duration: 1s;
+    }
+}
+@media (hover: none) {
+    .main-item input.main-item-radio .main-item-meme img {
+        width: 0;
+        height: 0;
+    }
+
+    .main-item input.main-item-radio:checked~.main-item-meme img {
+        display: inline-block;
+        background: #301c4930;
+        padding: 3em;
+        border: 0.01em solid #9d9d9d3b;
+        border-radius: 2em;
+        box-shadow: 0.1em 0.1em 0.3em 0.2em #2a2a2a38;
+        animation-name: slidein;
+        animation-duration: 2s;
+        width: 25em;
+        height: 25em;
+        object-fit: contain;
+    }
+
+    .main-box input.main-item-radio:checked~.main-item-title {
+        color: #1B1A1A;
+        transition: 1s linear;
+    }
+
+    .main-box .main-item-title-icon-open img {
+        display: block;
+        margin-top: 0em;
+    }
+    .main-box .main-item-title-icon-close img {
+        display: none;
+    }
+
+    .main-box input.main-item-radio:checked~.main-item-title .main-item-title-icon .main-item-title-icon-open img {
+        display: none;
+    }
+
+    .main-box input.main-item-radio:checked~.main-item-title .main-item-title-icon .main-item-title-icon-close img {
+        display: block;
+    }
+    label {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    }
+
 }
 
 footer {
@@ -201,15 +248,24 @@ footer {
 footer img {
     width: 5em;
 }
+
 @media (max-width: 1200px) {
     .container {
         width: 80%;
         box-shadow: none;
     }
+
     body {
         background: #f6f6f6;
     }
-    input.main-item-radio:checked~.main-item-meme img {
+
+    .main-item input.main-item-radio:checked~.main-item-meme img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
         width: 100%;
     }
 }
